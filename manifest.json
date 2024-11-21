@@ -3,6 +3,7 @@
     "short_name": "AR Viewer",
     "description": "A WebXR AR viewer for BIM models",
     "start_url": "/bimccar/",
+    "scope": "/bimccar/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#000000",
