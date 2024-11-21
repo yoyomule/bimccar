@@ -3,57 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AR Viewer</title>
-    <link rel="manifest" href="/manifest.json">
+    <title>BIM AR Viewer</title>
+    
+    <!-- PWA 相关标签 -->
+    <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#000000">
+    <meta name="description" content="A WebXR AR viewer for BIM models">
+    
+    <!-- iOS 支持 -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon" href="/icons/icon-192.png">
-    <style>
-        body { 
-            margin: 0; 
-            overflow: hidden;
-        }
-        #info {
-            position: fixed;
-            top: 10px;
-            width: 100%;
-            text-align: center;
-            color: white;
-            background: rgba(0,0,0,0.7);
-            padding: 5px;
-            z-index: 100;
-        }
-        #startAR {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 12px 24px;
-            background: #2196F3;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        #startAR:disabled {
-            background: #ccc;
-        }
-        #loadModel {
-            position: fixed;
-            bottom: 80px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 12px 24px;
-            background: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    
+    <!-- 确保使用 HTTPS -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    
+    <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
     <div id="info">正在检查 AR 支持...</div>
