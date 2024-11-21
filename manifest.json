@@ -1,22 +1,50 @@
 {
-    "name": "BIM AR Viewer",
-    "short_name": "AR Viewer",
-    "description": "A WebXR AR viewer for BIM models",
-    "start_url": "/bimccar/",
-    "scope": "/bimccar/",
-    "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#000000",
-    "icons": [
-      {
-        "src": "icons/icon-192.png",
-        "sizes": "192x192",
-        "type": "image/png"
-      },
-      {
-        "src": "icons/icon-512.png",
-        "sizes": "512x512",
-        "type": "image/png"
-      }
-    ]
-  }
+  "name": "BIM AR Viewer",
+  "short_name": "AR Viewer",
+  "description": "A WebXR AR viewer for BIM models",
+  "start_url": "/bimccar/",
+  "scope": "/bimccar/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/bimccar/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/bimccar/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "protocol_handlers": [
+    {
+      "protocol": "web+ar",
+      "url": "/bimccar/%s"
+    },
+    {
+      "protocol": "web+model",
+      "url": "/bimccar/model/%s"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/bimccar/screenshots/screen1.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "AR View of BIM Model"
+    },
+    {
+      "src": "/bimccar/screenshots/screen2.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Model Loading Interface"
+    }
+  ]
+}

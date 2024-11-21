@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BIM AR Viewer</title>
     
-    <!-- PWA 相关标签 -->
-    <link rel="manifest" href="manifest.json">
+    <!-- PWA 配置 -->
+    <link rel="manifest" href="/bimccar/manifest.json">
     <meta name="theme-color" content="#000000">
     <meta name="description" content="A WebXR AR viewer for BIM models">
     
@@ -15,15 +15,16 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="apple-touch-icon" href="icons/icon-192.png">
     
-    <!-- 确保使用 HTTPS -->
+    <!-- 强制 HTTPS -->
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     
+<script>navigator.serviceWorker.register("service-worker.js")</script> 
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
     <div id="info">正在检查 AR 支持...</div>
     <button id="startAR" disabled>启动 AR</button>
     <button id="loadModel">加载GCC模型</button>
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="src/main.js"></script>
 </body>
 </html>
